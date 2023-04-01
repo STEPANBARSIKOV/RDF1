@@ -61,7 +61,7 @@ form.addEventListener("submit", function(event) {
   const enteredPassword = passwordInput.value;
 
   // Выполняем проверку логина и пароля
-  if (enteredUsername === "ArhurMorgan" && enteredPassword === "PokerPlans") {
+  if (enteredUsername === "ArthurMorgan" && enteredPassword === "PokerPlans") {
     console.log("Вход выполнен успешно!");
     window.open("index.html");
   } else {
