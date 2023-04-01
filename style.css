@@ -33,8 +33,6 @@ header {
     
 }
 
-
-
 .name {
     font-size: 24px;
     color: red;
@@ -81,17 +79,20 @@ a:active {
     background-attachment: fixed;
     
 }
+
 p{
     font-size: large;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     margin: 10px;
 }
+
 .pCharachters{
     font-size: large;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     width: 500px;
     margin: 10px;
 }
+
 .button{
  width: 200px;
  height: 80px;
@@ -240,6 +241,7 @@ input{
 .menu-small {
     display: none;
     height: 2em;
+    color: black;
 }
 
 .menu_small_item {
@@ -258,6 +260,35 @@ input{
     height: auto;
 }
 @media (max-width: 650px) {
+    nav{
+        display: none;
+    }
+
+    .game{
+        background: url(images/rdr2vertical.jpg);
+    }
+
+    .rdrOne{
+        background: url(images/rdr1vertical.jpg);
+    }
+
+    p{
+        font-size: small;
+    }
+
+    .logo{
+        display: none;
+    }
+
+    .name{
+        font-size: larger;
+        margin: auto;
+    }
+
+    .characterBlock{
+        flex-direction: column;
+    }
+
     .menu {
         display: none;
     }
@@ -269,7 +300,7 @@ input{
         width: 100%;
         padding: 0;
         position: absolute;
-        background: white;
+        background: rgb(48, 48, 48);
         transform: translateX(-100%);
     }
 
