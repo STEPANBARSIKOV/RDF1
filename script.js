@@ -26,18 +26,18 @@ function backward(){
 }
 
 $('.menu_small_icon').click(function(){
-if(condition){
-forward();
-}else{    
-backward();    
-}
+    if(condition){
+        forward();
+    }else{    
+        backward();    
+    }
 })
 
-$('.container').on("touchstart", function (event){
+$('body').on("touchstart", function (event){
     start = event.originalEvent.touches[0].pageX;
 
 })
-$('.container').on("touchend", function (event){
+$('body').on("touchend", function (event){
     end = event.originalEvent.changedTouches[0].pageX;
     if (end - start >= 100 && condition) {
         forward();
@@ -46,19 +46,25 @@ $('.container').on("touchend", function (event){
         backward();
     }
 })
+// код для логина 
+const form = document.querySelector("form");
+const usernameInput = document.getElementById("username-input");
+const passwordInput = document.getElementById("password-input");
 
-function securuty(){
-const form = document.querySelector('form');
-form.addEventListener('submit', (event) => {
+// Обрабатываем отправку формы
+form.addEventListener("submit", function(event) {
+  // Отменяем стандартное поведение формы
   event.preventDefault();
-  const login = document.querySelector('login').value;
-  const password = document.querySelector('password').value;
-  if (login === 'Arthur Morgan' && password === 'plan') {
-    window.location.href = 'index.html';
-  } else {
-    alert('Неправильный логин или пароль.');
-  }
-});}
 
-let btn = document.querySelector(".btn")
-btn.addEventListener("click", securuty)
+  // Получаем введенный логин и пароль
+  const enteredUsername = usernameInput.value;
+  const enteredPassword = passwordInput.value;
+
+  // Выполняем проверку логина и пароля
+  if (enteredUsername === "ArhurMorgan" && enteredPassword === "PokerPlans") {
+    console.log("Вход выполнен успешно!");
+    window.open("index.html");
+  } else {
+    alert("Неверный логин или пароль!");
+  }
+});
